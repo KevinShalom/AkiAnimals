@@ -102,6 +102,7 @@ class AkinatorGUI(tk.Tk):
             self.animal_lb.insert(tk.END, a.capitalize())
 
     def _start_game(self):
+        self._init_state()  
         sel = self.animal_lb.get(tk.ACTIVE)
         if not sel:
             messagebox.showinfo("Akinator", "Selecciona un animal primero.")
